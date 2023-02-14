@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="CompanyArbitrationSummary">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SparkID" type="SparkID"/>
+										<xs:element name="ShortName" type="xs:string" minOccurs="0"/>
+										<xs:element name="INN" type="xs:string" minOccurs="0"/>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0"/>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0"/>
+										<xs:element name="OKATO" type="xs:string" minOccurs="0"/>
+										<xs:element name="Status" type="Status">
+											<xs:annotation>
+												<xs:documentation>Статус компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ArbitrationSummary" type="ArbitrationSummary">
+											<xs:annotation>
+												<xs:documentation>Сводные данные об арбитражных делах</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

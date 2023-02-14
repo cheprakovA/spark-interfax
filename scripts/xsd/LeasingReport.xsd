@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="LeasingReport">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Leasing" maxOccurs="unbounded">
+								<xs:annotation>
+									<xs:documentation>Договор лизинга</xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="StopReason" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Причина прекращения договора</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="Date" type="xs:date">
+															<xs:annotation>
+																<xs:documentation>Дата прекращения договора</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="MainContract" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Основной договор</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:attribute name="Number" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>Номер договора</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+												<xs:attribute name="Date" type="xs:date">
+													<xs:annotation>
+														<xs:documentation>Дата закоючения договора</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Lessors">
+											<xs:annotation>
+												<xs:documentation>Лизингодатели</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Participant" type="ContractParticipant" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Лизингодатель</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Lessees">
+											<xs:annotation>
+												<xs:documentation>Лизингополучатели</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Participant" type="ContractParticipant" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Лизингополучатель</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="LeasedProperty">
+											<xs:annotation>
+												<xs:documentation>Имущество, сдаваемое в аренду</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Item" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Описание имущества</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="Id" type="xs:string">
+																		<xs:annotation>
+																			<xs:documentation>Идентификатор предмета</xs:documentation>
+																		</xs:annotation>
+																	</xs:attribute>
+																	<xs:attribute name="TypeCode" type="xs:string" use="required">
+																		<xs:annotation>
+																			<xs:documentation>Код категории имущества</xs:documentation>
+																		</xs:annotation>
+																	</xs:attribute>
+																	<xs:attribute name="Type" type="xs:string" use="required">
+																		<xs:annotation>
+																			<xs:documentation>Категория имущества</xs:documentation>
+																		</xs:annotation>
+																	</xs:attribute>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="Id" type="xs:int" use="required">
+										<xs:annotation>
+											<xs:documentation>Идентификатор сообщения в СПАРК</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="IsActing" type="xs:boolean" use="required">
+										<xs:annotation>
+											<xs:documentation>Признак действующего/недействующего договора</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="IsSublease" type="xs:boolean" use="required">
+										<xs:annotation>
+											<xs:documentation>Признак договора сублизинга</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="ContractNumber" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>Номер договора</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="ContractDate" type="xs:date">
+										<xs:annotation>
+											<xs:documentation>Дата заключения договора</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="StartDate" type="xs:date">
+										<xs:annotation>
+											<xs:documentation>Дата начала действия договора</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+									<xs:attribute name="EndDate" type="xs:date">
+										<xs:annotation>
+											<xs:documentation>Дата окончания действия договора</xs:documentation>
+										</xs:annotation>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

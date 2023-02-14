@@ -1,0 +1,439 @@
+[2022-02-11 10:26:10,366] MainProcess                       | root    | INFO : starting <session.py>
+[2022-02-11 10:26:10,449] MainProcess                       | session | INFO : authentication successfull; ASP.NET_SessionId <pnec3volwratby4fbw4aseqj>
+[2022-02-11 10:26:10,450] MainProcess                       | root    | INFO : starting <provide_args.py>
+[2022-02-11 10:26:15,923] MainProcess                       | utils   | INFO : saved Spark_GetChangedCompanies_Main_20211220.parquet
+[2022-02-11 10:26:16,112] MainProcess                       | utils   | INFO : saved Spark_GetChangedEntrepreneurs_Main_20211220.parquet
+[2022-02-11 10:26:16,115] MainProcess                       | root    | INFO : starting <calculation.py>
+[2022-02-11 10:26:16,483] GetCompanySparkRisksReportXML     | root    | INFO : GetCompanySparkRisksReportXML num arguments: 68177
+[2022-02-11 10:26:16,483] GetCompanyArbitrationSummary      | root    | INFO : GetCompanyArbitrationSummary num arguments: 68177
+[2022-02-11 10:26:16,494] GetCompanyArbitrationSummary      | root    | INFO : started consumer
+[2022-02-11 10:26:16,495] GetCompanySparkRisksReportXML     | root    | INFO : started consumer
+[2022-02-11 10:26:16,496] Parser-1:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:26:16,497] Parser-2:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:27:13,906] Parser-1:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:27:13,930] Parser-1:1                        | sparser | INFO : saved: Spark_GetCompanyArbitrationSummary_FaceResult_20211220.parquet
+[2022-02-11 10:27:13,948] Parser-1:1                        | sparser | INFO : saved: Spark_GetCompanyArbitrationSummary_ByType_20211220.parquet
+[2022-02-11 10:27:13,973] Parser-1:1                        | sparser | INFO : saved: Spark_GetCompanyArbitrationSummary_ByYear_20211220.parquet
+[2022-02-11 10:27:13,987] Parser-1:1                        | sparser | INFO : saved: Spark_GetCompanyArbitrationSummary_Main_20211220.parquet
+[2022-02-11 10:27:13,995] GetCompanyArbitrationSummary      | root    | INFO : time elapsed: 57.87264394760132
+[2022-02-11 10:27:17,019] Parser-2:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:27:17,084] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_AddInfo_20211220.parquet
+[2022-02-11 10:27:17,091] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_Finance_20211220.parquet
+[2022-02-11 10:27:17,096] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_Phones_20211220.parquet
+[2022-02-11 10:27:17,100] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_ListName_20211220.parquet
+[2022-02-11 10:27:17,104] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_Factor_20211220.parquet
+[2022-02-11 10:27:17,107] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_Auditors_20211220.parquet
+[2022-02-11 10:27:17,112] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_MainCoowners_20211220.parquet
+[2022-02-11 10:27:17,160] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_Main_20211220.parquet
+[2022-02-11 10:27:17,162] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_SROs_20211220.parquet
+[2022-02-11 10:27:17,248] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_FrozenAccounts_20211220.parquet
+[2022-02-11 10:27:17,257] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_TaxesFTSDetail_20211220.parquet
+[2022-02-11 10:27:17,259] Parser-2:1                        | sparser | INFO : saved: Spark_GetCompanySparkRisksReportXML_TaxesFTS_20211220.parquet
+[2022-02-11 10:27:17,275] GetCompanySparkRisksReportXML     | root    | INFO : time elapsed: 61.14881420135498
+[2022-02-11 10:27:17,665] GetCompanyLeasings                | root    | INFO : GetCompanyLeasings num arguments: 68177
+[2022-02-11 10:27:17,667] GetCompanyPledges                 | root    | INFO : GetCompanyPledges num arguments: 68177
+[2022-02-11 10:27:17,677] GetCompanyLeasings                | root    | INFO : started consumer
+[2022-02-11 10:27:17,678] Parser-3:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:27:17,678] GetCompanyPledges                 | root    | INFO : started consumer
+[2022-02-11 10:27:17,680] Parser-4:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:28:18,696] Parser-4:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:28:18,741] Parser-4:1                        | sparser | INFO : saved: Spark_GetCompanyPledges_PledgesParticipants_20211220.parquet
+[2022-02-11 10:28:18,764] Parser-4:1                        | sparser | INFO : saved: Spark_GetCompanyPledges_Pledges_20211220.parquet
+[2022-02-11 10:28:18,767] Parser-4:1                        | sparser | INFO : saved: Spark_GetCompanyPledges_Main_20211220.parquet
+[2022-02-11 10:28:18,774] GetCompanyPledges                 | root    | INFO : time elapsed: 61.47481179237366
+[2022-02-11 10:28:19,438] Parser-3:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:28:19,555] Parser-3:1                        | sparser | INFO : saved: Spark_GetCompanyLeasings_Participants_20211220.parquet
+[2022-02-11 10:28:19,688] Parser-3:1                        | sparser | INFO : saved: Spark_GetCompanyLeasings_Leasings_20211220.parquet
+[2022-02-11 10:28:19,690] Parser-3:1                        | sparser | INFO : saved: Spark_GetCompanyLeasings_Main_20211220.parquet
+[2022-02-11 10:28:19,708] GetCompanyLeasings                | root    | INFO : time elapsed: 62.41285800933838
+[2022-02-11 10:28:19,855] GetEntrepreneurArbitrationSummary | root    | INFO : GetEntrepreneurArbitrationSummary num arguments: 21535
+[2022-02-11 10:28:19,857] GetEntrepreneurLeasings           | root    | INFO : GetEntrepreneurLeasings num arguments: 21535
+[2022-02-11 10:28:19,857] GetEntrepreneurPledges            | root    | INFO : GetEntrepreneurPledges num arguments: 21535
+[2022-02-11 10:28:19,867] GetEntrepreneurArbitrationSummary | root    | INFO : started consumer
+[2022-02-11 10:28:19,868] GetEntrepreneurLeasings           | root    | INFO : started consumer
+[2022-02-11 10:28:19,868] GetEntrepreneurPledges            | root    | INFO : started consumer
+[2022-02-11 10:28:19,869] Parser-5:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:28:19,870] Parser-6:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:28:19,870] Parser-7:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:29:49,635] Parser-7:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:29:49,650] Parser-7:1                        | sparser | INFO : saved: Spark_GetEntrepreneurPledges_PledgesParticipants_20211220.parquet
+[2022-02-11 10:29:49,653] Parser-7:1                        | sparser | INFO : saved: Spark_GetEntrepreneurPledges_Pledges_20211220.parquet
+[2022-02-11 10:29:49,654] Parser-7:1                        | sparser | INFO : saved: Spark_GetEntrepreneurPledges_Main_20211220.parquet
+[2022-02-11 10:29:49,660] GetEntrepreneurPledges            | root    | INFO : time elapsed: 89.92515563964844
+[2022-02-11 10:29:49,838] Parser-5:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:29:49,843] Parser-5:1                        | sparser | INFO : saved: Spark_GetEntrepreneurArbitrationSummary_FaceResult_20211220.parquet
+[2022-02-11 10:29:49,846] Parser-5:1                        | sparser | INFO : saved: Spark_GetEntrepreneurArbitrationSummary_ByType_20211220.parquet
+[2022-02-11 10:29:49,848] Parser-5:1                        | sparser | INFO : saved: Spark_GetEntrepreneurArbitrationSummary_ByYear_20211220.parquet
+[2022-02-11 10:29:49,853] Parser-5:1                        | sparser | INFO : saved: Spark_GetEntrepreneurArbitrationSummary_Main_20211220.parquet
+[2022-02-11 10:29:49,859] GetEntrepreneurArbitrationSummary | root    | INFO : time elapsed: 90.13089919090271
+[2022-02-11 10:29:49,891] Parser-6:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:29:49,905] Parser-6:1                        | sparser | INFO : saved: Spark_GetEntrepreneurLeasings_Participants_20211220.parquet
+[2022-02-11 10:29:49,907] Parser-6:1                        | sparser | INFO : saved: Spark_GetEntrepreneurLeasings_Leasings_20211220.parquet
+[2022-02-11 10:29:49,908] Parser-6:1                        | sparser | INFO : saved: Spark_GetEntrepreneurLeasings_Main_20211220.parquet
+[2022-02-11 10:29:49,914] GetEntrepreneurLeasings           | root    | INFO : time elapsed: 90.18229961395264
+[2022-02-11 10:29:50,003] GetPledgeReport                   | root    | INFO : GetPledgeReport num arguments: 3800
+[2022-02-11 10:29:50,016] GetPledgeReport                   | root    | INFO : started consumer
+[2022-02-11 10:29:50,018] Parser-9:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:29:50,023] GetLeasingReport                  | root    | INFO : GetLeasingReport num arguments: 11929
+[2022-02-11 10:29:50,036] GetLeasingReport                  | root    | INFO : started consumer
+[2022-02-11 10:29:50,037] Parser-8:1                        | sparser | INFO : consumer started processing responses
+[2022-02-11 10:30:49,634] Parser-9:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:30:49,648] Parser-9:1                        | sparser | INFO : saved: Spark_GetPledgeReport_Pledges_20211220.parquet
+[2022-02-11 10:30:49,840] Parser-9:1                        | sparser | INFO : saved: Spark_GetPledgeReport_Items_20211220.parquet
+[2022-02-11 10:30:49,845] Parser-9:1                        | sparser | INFO : saved: Spark_GetPledgeReport_Main_20211220.parquet
+[2022-02-11 10:30:49,859] GetPledgeReport                   | root    | INFO : time elapsed: 59.92461824417114
+[2022-02-11 10:30:50,034] Parser-8:1                        | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:30:50,045] Parser-8:1                        | sparser | INFO : saved: Spark_GetLeasingReport_Report_20211220.parquet
+[2022-02-11 10:30:50,050] Parser-8:1                        | sparser | INFO : saved: Spark_GetLeasingReport_Items_20211220.parquet
+[2022-02-11 10:30:50,054] Parser-8:1                        | sparser | INFO : saved: Spark_GetLeasingReport_Main_20211220.parquet
+[2022-02-11 10:30:50,061] GetLeasingReport                  | root    | INFO : time elapsed: 60.12913179397583
+[2022-02-11 10:30:50,446] GetCompanyCounterparties          | root    | INFO : GetCompanyCounterparties num arguments: 68177
+[2022-02-11 10:30:50,447] GetCompanyExecutionProceedings    | root    | INFO : GetCompanyExecutionProceedings num arguments: 68177
+[2022-02-11 10:30:50,458] GetCompanyExecutionProceedings    | root    | INFO : started consumer
+[2022-02-11 10:30:50,458] GetCompanyCounterparties          | root    | INFO : started consumer
+[2022-02-11 10:30:50,459] Parser-10:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:30:50,459] Parser-11:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:31:50,518] GetCompanyCounterparties          | root    | WARNING: __company_1661_4202050996_1164205068598_ request error occured _ 
+[2022-02-11 10:31:50,665] GetCompanyExecutionProceedings    | root    | WARNING: __company_1782_7529001079_1027501005608_ request error occured _ 
+[2022-02-11 10:31:51,615] GetCompanyCounterparties          | root    | WARNING: __company_2100_7417001747_1027401062325_ request error occured _ 
+[2022-02-11 10:32:33,871] Parser-10:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:32:35,846] Parser-10:1                       | sparser | INFO : saved: Spark_GetCompanyExecutionProceedings_ExecutionProceedings_20211220.parquet
+[2022-02-11 10:32:35,851] Parser-10:1                       | sparser | INFO : saved: Spark_GetCompanyExecutionProceedings_Main_20211220.parquet
+[2022-02-11 10:32:35,887] GetCompanyExecutionProceedings    | root    | INFO : time elapsed: 105.8059515953064
+[2022-02-11 10:32:44,472] Parser-11:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:32:48,395] Parser-11:1                       | sparser | INFO : saved: Spark_GetCompanyCounterparties_Sources_20211220.parquet
+[2022-02-11 10:32:55,059] Parser-11:1                       | sparser | INFO : saved: Spark_GetCompanyCounterparties_Counterparties_20211220.parquet
+[2022-02-11 10:32:55,065] Parser-11:1                       | sparser | INFO : saved: Spark_GetCompanyCounterparties_Main_20211220.parquet
+[2022-02-11 10:32:55,208] GetCompanyCounterparties          | root    | INFO : time elapsed: 125.12383365631104
+[2022-02-11 10:32:55,609] GetCompanyFinancialAnalysis       | root    | INFO : GetCompanyFinancialAnalysis num arguments: 68177
+[2022-02-11 10:32:55,610] GetCompanyLicenses                | root    | INFO : GetCompanyLicenses num arguments: 68177
+[2022-02-11 10:32:55,622] GetCompanyFinancialAnalysis       | root    | INFO : started consumer
+[2022-02-11 10:32:55,623] GetCompanyLicenses                | root    | INFO : started consumer
+[2022-02-11 10:32:55,624] Parser-13:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:32:55,624] Parser-12:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:33:55,599] Parser-13:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:33:55,614] Parser-13:1                       | sparser | INFO : saved: Spark_GetCompanyFinancialAnalysis_FinancialAnalysis_20211220.parquet
+[2022-02-11 10:33:55,619] Parser-13:1                       | sparser | INFO : saved: Spark_GetCompanyFinancialAnalysis_FinIndicators_20211220.parquet
+[2022-02-11 10:33:55,624] Parser-13:1                       | sparser | INFO : saved: Spark_GetCompanyFinancialAnalysis_Main_20211220.parquet
+[2022-02-11 10:33:55,631] GetCompanyFinancialAnalysis       | root    | INFO : time elapsed: 60.37990045547485
+[2022-02-11 10:33:55,644] Parser-12:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:33:55,782] Parser-12:1                       | sparser | INFO : saved: Spark_GetCompanyLicenses_Licenses_20211220.parquet
+[2022-02-11 10:33:55,786] Parser-12:1                       | sparser | INFO : saved: Spark_GetCompanyLicenses_Main_20211220.parquet
+[2022-02-11 10:33:55,800] GetCompanyLicenses                | root    | INFO : time elapsed: 60.55219531059265
+[2022-02-11 10:33:56,174] GetCompanyRiskFactors             | root    | INFO : GetCompanyRiskFactors num arguments: 68177
+[2022-02-11 10:33:56,174] GetCompanyPaymentDiscipline       | root    | INFO : GetCompanyPaymentDiscipline num arguments: 68177
+[2022-02-11 10:33:56,185] GetCompanyRiskFactors             | root    | INFO : started consumer
+[2022-02-11 10:33:56,186] GetCompanyPaymentDiscipline       | root    | INFO : started consumer
+[2022-02-11 10:33:56,187] Parser-14:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:33:56,187] Parser-15:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:34:55,859] Parser-15:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:34:55,867] Parser-15:1                       | sparser | INFO : saved: Spark_GetCompanyPaymentDiscipline_PaymentIndexValues_20211220.parquet
+[2022-02-11 10:34:55,879] Parser-15:1                       | sparser | INFO : saved: Spark_GetCompanyPaymentDiscipline_PaymentIndexDynamics_20211220.parquet
+[2022-02-11 10:34:55,887] Parser-15:1                       | sparser | INFO : saved: Spark_GetCompanyPaymentDiscipline_AnalysisByAmount_20211220.parquet
+[2022-02-11 10:34:55,897] Parser-15:1                       | sparser | INFO : saved: Spark_GetCompanyPaymentDiscipline_Overdue_20211220.parquet
+[2022-02-11 10:34:55,904] Parser-15:1                       | sparser | INFO : saved: Spark_GetCompanyPaymentDiscipline_AnalysisByIndustry_20211220.parquet
+[2022-02-11 10:34:55,907] Parser-15:1                       | sparser | INFO : saved: Spark_GetCompanyPaymentDiscipline_Main_20211220.parquet
+[2022-02-11 10:34:55,914] GetCompanyPaymentDiscipline       | root    | INFO : time elapsed: 60.090763568878174
+[2022-02-11 10:34:57,837] Parser-14:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:34:57,845] Parser-14:1                       | sparser | INFO : saved: Spark_GetCompanyRiskFactors_ConsolidatedIndicator_20211220.parquet
+[2022-02-11 10:34:57,853] Parser-14:1                       | sparser | INFO : saved: Spark_GetCompanyRiskFactors_Main_20211220.parquet
+[2022-02-11 10:34:57,857] Parser-14:1                       | sparser | INFO : saved: Spark_GetCompanyRiskFactors_RiskFactors_20211220.parquet
+[2022-02-11 10:34:57,864] GetCompanyRiskFactors             | root    | INFO : time elapsed: 62.043890714645386
+[2022-02-11 10:34:58,242] GetCompanyStructure               | root    | INFO : GetCompanyStructure num arguments: 68177
+[2022-02-11 10:34:58,242] GetCompanyExtendedReport          | root    | INFO : GetCompanyExtendedReport num arguments: 68177
+[2022-02-11 10:34:58,255] GetCompanyStructure               | root    | INFO : started consumer
+[2022-02-11 10:34:58,255] GetCompanyExtendedReport          | root    | INFO : started consumer
+[2022-02-11 10:34:58,256] Parser-17:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:34:58,257] Parser-16:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:35:57,798] Parser-17:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:35:57,823] Parser-17:1                       | sparser | INFO : saved: Spark_GetCompanyStructure_Coowners_20211220.parquet
+[2022-02-11 10:35:57,850] Parser-17:1                       | sparser | INFO : saved: Spark_GetCompanyStructure_Branch_20211220.parquet
+[2022-02-11 10:35:57,865] Parser-17:1                       | sparser | INFO : saved: Spark_GetCompanyStructure_AffiliatedCompanies_20211220.parquet
+[2022-02-11 10:35:57,872] Parser-17:1                       | sparser | INFO : saved: Spark_GetCompanyStructure_NonprofitOrganizationsRosstat_20211220.parquet
+[2022-02-11 10:35:57,877] Parser-17:1                       | sparser | INFO : saved: Spark_GetCompanyStructure_Main_20211220.parquet
+[2022-02-11 10:35:57,879] Parser-17:1                       | sparser | INFO : saved: Spark_GetCompanyStructure_CoownerEGRUL_Pledge_20211220.parquet
+[2022-02-11 10:35:57,889] GetCompanyStructure               | root    | INFO : time elapsed: 60.00217056274414
+[2022-02-11 10:35:59,769] Parser-16:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:35:59,798] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_OKVED2List_20211220.parquet
+[2022-02-11 10:35:59,803] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_ChangesInNameAndLegalForm_20211220.parquet
+[2022-02-11 10:35:59,805] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_CharterCapitalHistory_20211220.parquet
+[2022-02-11 10:35:59,814] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_LeaderList_20211220.parquet
+[2022-02-11 10:35:59,829] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_Addresses_20211220.parquet
+[2022-02-11 10:35:59,841] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_PhoneList_20211220.parquet
+[2022-02-11 10:35:59,963] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_IncludeInList_20211220.parquet
+[2022-02-11 10:35:59,968] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_ConsolidatedIndicator_20211220.parquet
+[2022-02-11 10:35:59,982] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_SubmittedStatements_20211220.parquet
+[2022-02-11 10:35:59,993] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_RegistrationCertificates_20211220.parquet
+[2022-02-11 10:36:00,634] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_Finance_20211220.parquet
+[2022-02-11 10:36:00,638] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_BoardOfDirectors_ExecutiveBody_20211220.parquet
+[2022-02-11 10:36:00,641] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_PersonsWithoutWarrant_20211220.parquet
+[2022-02-11 10:36:00,655] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_StateContracts_20211220.parquet
+[2022-02-11 10:36:00,673] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_ArbitrationCases_20211220.parquet
+[2022-02-11 10:36:00,706] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_Main_20211220.parquet
+[2022-02-11 10:36:00,709] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_StaffNumberFTS_20211220.parquet
+[2022-02-11 10:36:00,712] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_IncludeInList_AddInfo_20211220.parquet
+[2022-02-11 10:36:00,901] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_FinanceAndTaxesFTS_20211220.parquet
+[2022-02-11 10:36:00,917] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_AccessibleFinData_20211220.parquet
+[2022-02-11 10:36:00,918] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_SpecialTaxRegimes_20211220.parquet
+[2022-02-11 10:36:00,934] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_BankruptcyMessage_20211220.parquet
+[2022-02-11 10:36:00,965] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_FrozenAccounts_20211220.parquet
+[2022-02-11 10:36:00,967] Parser-16:1                       | sparser | INFO : saved: Spark_GetCompanyExtendedReport_BankruptcyArbitrationCases_20211220.parquet
+[2022-02-11 10:36:00,994] GetCompanyExtendedReport          | root    | INFO : time elapsed: 63.11067509651184
+[2022-02-11 10:36:01,374] GetCompanyPredecessorSuccessor    | root    | INFO : GetCompanyPredecessorSuccessor num arguments: 68177
+[2022-02-11 10:36:01,375] GetCompanyAccountingReport        | root    | INFO : GetCompanyAccountingReport num arguments: 68177
+[2022-02-11 10:36:01,386] GetCompanyPredecessorSuccessor    | root    | INFO : started consumer
+[2022-02-11 10:36:01,386] GetCompanyAccountingReport        | root    | INFO : started consumer
+[2022-02-11 10:36:01,387] Parser-18:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:36:01,388] Parser-19:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:36:59,654] Parser-18:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:36:59,664] Parser-18:1                       | sparser | INFO : saved: Spark_GetCompanyPredecessorSuccessor_Reorganizations_20211220.parquet
+[2022-02-11 10:36:59,667] Parser-18:1                       | sparser | INFO : saved: Spark_GetCompanyPredecessorSuccessor_Main_20211220.parquet
+[2022-02-11 10:36:59,673] GetCompanyPredecessorSuccessor    | root    | INFO : time elapsed: 58.659635066986084
+[2022-02-11 10:37:01,448] Parser-19:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:37:02,146] Parser-19:1                       | sparser | INFO : saved: Spark_GetCompanyAccountingReport_Period_20211220.parquet
+[2022-02-11 10:37:02,152] Parser-19:1                       | sparser | INFO : saved: Spark_GetCompanyAccountingReport_Main_20211220.parquet
+[2022-02-11 10:37:02,169] GetCompanyAccountingReport        | root    | INFO : time elapsed: 61.1529586315155
+[2022-02-11 10:37:02,313] GetEntrepreneurShortReport        | root    | INFO : GetEntrepreneurShortReport num arguments: 21535
+[2022-02-11 10:37:02,325] GetEntrepreneurShortReport        | root    | INFO : started consumer
+[2022-02-11 10:37:02,327] Parser-20:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:37:02,563] GetOwnershipHierarchy             | root    | INFO : GetOwnershipHierarchy num arguments: 68177
+[2022-02-11 10:37:02,575] GetOwnershipHierarchy             | root    | INFO : started consumer
+[2022-02-11 10:37:02,577] Parser-21:1                       | sparser | INFO : consumer started processing responses
+[2022-02-11 10:38:01,870] Parser-20:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:38:01,892] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_OKVED2List_20211220.parquet
+[2022-02-11 10:38:01,896] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_SubmittedStatements_20211220.parquet
+[2022-02-11 10:38:01,898] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_IncludeInList_20211220.parquet
+[2022-02-11 10:38:01,901] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_IncludeInList_AddInfo_20211220.parquet
+[2022-02-11 10:38:01,920] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_Main_20211220.parquet
+[2022-02-11 10:38:01,921] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_LinkedOGRNIP_20211220.parquet
+[2022-02-11 10:38:01,923] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_RegistrationCertificates_20211220.parquet
+[2022-02-11 10:38:01,925] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_ArbitrationCases_20211220.parquet
+[2022-02-11 10:38:01,927] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_FrozenAccounts_20211220.parquet
+[2022-02-11 10:38:01,928] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_StateContracts_20211220.parquet
+[2022-02-11 10:38:01,929] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_PhoneList_20211220.parquet
+[2022-02-11 10:38:01,930] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_BankruptcyMessage_20211220.parquet
+[2022-02-11 10:38:01,932] Parser-20:1                       | sparser | INFO : saved: Spark_GetEntrepreneurShortReport_BankruptcyArbitrationCases_20211220.parquet
+[2022-02-11 10:38:01,939] GetEntrepreneurShortReport        | root    | INFO : time elapsed: 59.75075554847717
+[2022-02-11 10:38:02,355] Parser-21:1                       | sparser | INFO : consumer processed all items in queue (None element found)
+[2022-02-11 10:38:02,370] Parser-21:1                       | sparser | INFO : saved: Spark_GetOwnershipHierarchy_Coowners_20211220.parquet
+[2022-02-11 10:38:02,374] Parser-21:1                       | sparser | INFO : saved: Spark_GetOwnershipHierarchy_Main_20211220.parquet
+[2022-02-11 10:38:02,381] GetOwnershipHierarchy             | root    | INFO : time elapsed: 60.18957781791687
+[2022-02-11 10:38:02,395] MainProcess                       | root    | INFO : starting <uploading.py>
+[2022-02-11 10:38:02,488] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetChangedCompanies_Main_20211220.parquet
+[2022-02-11 10:38:02,865] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetChangedEntrepreneurs_Main_20211220.parquet
+[2022-02-11 10:38:03,058] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyArbitrationSummary_FaceResult_20211220.parquet
+[2022-02-11 10:38:03,088] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyArbitrationSummary_ByType_20211220.parquet
+[2022-02-11 10:38:03,128] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyArbitrationSummary_ByYear_20211220.parquet
+[2022-02-11 10:38:03,185] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyArbitrationSummary_Main_20211220.parquet
+[2022-02-11 10:38:03,216] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_AddInfo_20211220.parquet
+[2022-02-11 10:38:03,243] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_Finance_20211220.parquet
+[2022-02-11 10:38:03,282] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_Phones_20211220.parquet
+[2022-02-11 10:38:03,333] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_ListName_20211220.parquet
+[2022-02-11 10:38:03,371] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_Factor_20211220.parquet
+[2022-02-11 10:38:03,437] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_Auditors_20211220.parquet
+[2022-02-11 10:38:03,486] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_MainCoowners_20211220.parquet
+[2022-02-11 10:38:03,542] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_Main_20211220.parquet
+[2022-02-11 10:38:03,688] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_SROs_20211220.parquet
+[2022-02-11 10:38:03,732] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_FrozenAccounts_20211220.parquet
+[2022-02-11 10:38:03,855] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_TaxesFTSDetail_20211220.parquet
+[2022-02-11 10:38:03,902] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanySparkRisksReportXML_TaxesFTS_20211220.parquet
+[2022-02-11 10:38:03,954] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPledges_PledgesParticipants_20211220.parquet
+[2022-02-11 10:38:03,984] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPledges_Pledges_20211220.parquet
+[2022-02-11 10:38:04,054] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPledges_Main_20211220.parquet
+[2022-02-11 10:38:04,105] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyLeasings_Participants_20211220.parquet
+[2022-02-11 10:38:04,258] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyLeasings_Leasings_20211220.parquet
+[2022-02-11 10:38:04,346] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyLeasings_Main_20211220.parquet
+[2022-02-11 10:38:04,372] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurPledges_PledgesParticipants_20211220.parquet
+[2022-02-11 10:38:04,423] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurPledges_Pledges_20211220.parquet
+[2022-02-11 10:38:04,470] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurPledges_Main_20211220.parquet
+[2022-02-11 10:38:04,499] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurArbitrationSummary_FaceResult_20211220.parquet
+[2022-02-11 10:38:04,544] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurArbitrationSummary_ByType_20211220.parquet
+[2022-02-11 10:38:04,570] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurArbitrationSummary_ByYear_20211220.parquet
+[2022-02-11 10:38:04,611] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurArbitrationSummary_Main_20211220.parquet
+[2022-02-11 10:38:04,712] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurLeasings_Participants_20211220.parquet
+[2022-02-11 10:38:04,762] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurLeasings_Leasings_20211220.parquet
+[2022-02-11 10:38:04,810] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurLeasings_Main_20211220.parquet
+[2022-02-11 10:38:04,863] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetPledgeReport_Pledges_20211220.parquet
+[2022-02-11 10:38:04,898] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetPledgeReport_Items_20211220.parquet
+[2022-02-11 10:38:05,114] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetPledgeReport_Main_20211220.parquet
+[2022-02-11 10:38:05,162] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetLeasingReport_Report_20211220.parquet
+[2022-02-11 10:38:05,197] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetLeasingReport_Items_20211220.parquet
+[2022-02-11 10:38:05,251] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetLeasingReport_Main_20211220.parquet
+[2022-02-11 10:38:05,307] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExecutionProceedings_ExecutionProceedings_20211220.parquet
+[2022-02-11 10:38:05,796] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExecutionProceedings_Main_20211220.parquet
+[2022-02-11 10:38:05,844] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyCounterparties_Sources_20211220.parquet
+[2022-02-11 10:38:06,012] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyCounterparties_Counterparties_20211220.parquet
+[2022-02-11 10:38:06,578] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyCounterparties_Main_20211220.parquet
+[2022-02-11 10:38:06,616] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyFinancialAnalysis_FinancialAnalysis_20211220.parquet
+[2022-02-11 10:38:06,689] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyFinancialAnalysis_FinIndicators_20211220.parquet
+[2022-02-11 10:38:06,732] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyFinancialAnalysis_Main_20211220.parquet
+[2022-02-11 10:38:06,803] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyLicenses_Licenses_20211220.parquet
+[2022-02-11 10:38:06,858] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyLicenses_Main_20211220.parquet
+[2022-02-11 10:38:06,890] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPaymentDiscipline_PaymentIndexValues_20211220.parquet
+[2022-02-11 10:38:06,935] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPaymentDiscipline_PaymentIndexDynamics_20211220.parquet
+[2022-02-11 10:38:06,992] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPaymentDiscipline_AnalysisByAmount_20211220.parquet
+[2022-02-11 10:38:07,042] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPaymentDiscipline_Overdue_20211220.parquet
+[2022-02-11 10:38:07,098] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPaymentDiscipline_AnalysisByIndustry_20211220.parquet
+[2022-02-11 10:38:07,143] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPaymentDiscipline_Main_20211220.parquet
+[2022-02-11 10:38:07,186] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyRiskFactors_ConsolidatedIndicator_20211220.parquet
+[2022-02-11 10:38:07,218] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyRiskFactors_Main_20211220.parquet
+[2022-02-11 10:38:07,312] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyRiskFactors_RiskFactors_20211220.parquet
+[2022-02-11 10:38:07,364] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyStructure_Coowners_20211220.parquet
+[2022-02-11 10:38:07,419] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyStructure_Branch_20211220.parquet
+[2022-02-11 10:38:07,645] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyStructure_AffiliatedCompanies_20211220.parquet
+[2022-02-11 10:38:07,736] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyStructure_NonprofitOrganizationsRosstat_20211220.parquet
+[2022-02-11 10:38:07,829] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyStructure_Main_20211220.parquet
+[2022-02-11 10:38:07,890] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyStructure_CoownerEGRUL_Pledge_20211220.parquet
+[2022-02-11 10:38:07,945] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_OKVED2List_20211220.parquet
+[2022-02-11 10:38:08,027] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_ChangesInNameAndLegalForm_20211220.parquet
+[2022-02-11 10:38:08,083] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_CharterCapitalHistory_20211220.parquet
+[2022-02-11 10:38:08,114] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_LeaderList_20211220.parquet
+[2022-02-11 10:38:08,153] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_Addresses_20211220.parquet
+[2022-02-11 10:38:08,238] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_PhoneList_20211220.parquet
+[2022-02-11 10:38:08,282] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_IncludeInList_20211220.parquet
+[2022-02-11 10:38:08,310] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_ConsolidatedIndicator_20211220.parquet
+[2022-02-11 10:38:08,473] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_SubmittedStatements_20211220.parquet
+[2022-02-11 10:38:08,564] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_RegistrationCertificates_20211220.parquet
+[2022-02-11 10:38:08,683] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_Finance_20211220.parquet
+[2022-02-11 10:38:08,828] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_BoardOfDirectors_ExecutiveBody_20211220.parquet
+[2022-02-11 10:38:08,884] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_PersonsWithoutWarrant_20211220.parquet
+[2022-02-11 10:38:08,926] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_StateContracts_20211220.parquet
+[2022-02-11 10:38:08,999] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_ArbitrationCases_20211220.parquet
+[2022-02-11 10:38:09,072] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_Main_20211220.parquet
+[2022-02-11 10:38:09,114] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_StaffNumberFTS_20211220.parquet
+[2022-02-11 10:38:09,162] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_IncludeInList_AddInfo_20211220.parquet
+[2022-02-11 10:38:09,303] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_FinanceAndTaxesFTS_20211220.parquet
+[2022-02-11 10:38:09,421] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_AccessibleFinData_20211220.parquet
+[2022-02-11 10:38:09,501] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_SpecialTaxRegimes_20211220.parquet
+[2022-02-11 10:38:09,544] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_BankruptcyMessage_20211220.parquet
+[2022-02-11 10:38:09,600] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_FrozenAccounts_20211220.parquet
+[2022-02-11 10:38:09,770] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyExtendedReport_BankruptcyArbitrationCases_20211220.parquet
+[2022-02-11 10:38:09,851] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPredecessorSuccessor_Reorganizations_20211220.parquet
+[2022-02-11 10:38:09,918] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyPredecessorSuccessor_Main_20211220.parquet
+[2022-02-11 10:38:10,006] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyAccountingReport_Period_20211220.parquet
+[2022-02-11 10:38:10,242] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetCompanyAccountingReport_Main_20211220.parquet
+[2022-02-11 10:38:10,360] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_OKVED2List_20211220.parquet
+[2022-02-11 10:38:10,443] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_SubmittedStatements_20211220.parquet
+[2022-02-11 10:38:10,521] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_IncludeInList_20211220.parquet
+[2022-02-11 10:38:10,568] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_IncludeInList_AddInfo_20211220.parquet
+[2022-02-11 10:38:10,614] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_Main_20211220.parquet
+[2022-02-11 10:38:10,708] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_LinkedOGRNIP_20211220.parquet
+[2022-02-11 10:38:10,846] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_RegistrationCertificates_20211220.parquet
+[2022-02-11 10:38:10,904] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_ArbitrationCases_20211220.parquet
+[2022-02-11 10:38:10,959] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_FrozenAccounts_20211220.parquet
+[2022-02-11 10:38:11,011] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_StateContracts_20211220.parquet
+[2022-02-11 10:38:11,158] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_PhoneList_20211220.parquet
+[2022-02-11 10:38:11,262] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_BankruptcyMessage_20211220.parquet
+[2022-02-11 10:38:11,383] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetEntrepreneurShortReport_BankruptcyArbitrationCases_20211220.parquet
+[2022-02-11 10:38:11,455] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetOwnershipHierarchy_Coowners_20211220.parquet
+[2022-02-11 10:38:11,519] MainProcess                       | bucket  | INFO : uploaded file: Spark_GetOwnershipHierarchy_Main_20211220.parquet
+[2022-02-11 10:38:11,681] MainProcess                       | root    | INFO : starting <session.py>
+[2022-02-11 10:38:11,765] MainProcess                       | session | INFO : session <pnec3volwratby4fbw4aseqj> successfully ended
+[2022-02-11 10:38:11,766] MainProcess                       | utils   | INFO : deleted: Spark_GetChangedCompanies_Main_20211220
+[2022-02-11 10:38:11,766] MainProcess                       | utils   | INFO : deleted: Spark_GetChangedEntrepreneurs_Main_20211220
+[2022-02-11 10:38:11,766] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyArbitrationSummary_FaceResult_20211220
+[2022-02-11 10:38:11,766] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyArbitrationSummary_ByType_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyArbitrationSummary_ByYear_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyArbitrationSummary_Main_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_AddInfo_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_Finance_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_Phones_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_ListName_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_Factor_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_Auditors_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_MainCoowners_20211220
+[2022-02-11 10:38:11,767] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_Main_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_SROs_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_FrozenAccounts_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_TaxesFTSDetail_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanySparkRisksReportXML_TaxesFTS_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPledges_PledgesParticipants_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPledges_Pledges_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPledges_Main_20211220
+[2022-02-11 10:38:11,768] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyLeasings_Participants_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyLeasings_Leasings_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyLeasings_Main_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurPledges_PledgesParticipants_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurPledges_Pledges_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurPledges_Main_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurArbitrationSummary_FaceResult_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurArbitrationSummary_ByType_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurArbitrationSummary_ByYear_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurArbitrationSummary_Main_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurLeasings_Participants_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurLeasings_Leasings_20211220
+[2022-02-11 10:38:11,769] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurLeasings_Main_20211220
+[2022-02-11 10:38:11,770] MainProcess                       | utils   | INFO : deleted: Spark_GetPledgeReport_Pledges_20211220
+[2022-02-11 10:38:11,770] MainProcess                       | utils   | INFO : deleted: Spark_GetPledgeReport_Items_20211220
+[2022-02-11 10:38:11,770] MainProcess                       | utils   | INFO : deleted: Spark_GetPledgeReport_Main_20211220
+[2022-02-11 10:38:11,770] MainProcess                       | utils   | INFO : deleted: Spark_GetLeasingReport_Report_20211220
+[2022-02-11 10:38:11,770] MainProcess                       | utils   | INFO : deleted: Spark_GetLeasingReport_Items_20211220
+[2022-02-11 10:38:11,770] MainProcess                       | utils   | INFO : deleted: Spark_GetLeasingReport_Main_20211220
+[2022-02-11 10:38:11,771] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExecutionProceedings_ExecutionProceedings_20211220
+[2022-02-11 10:38:11,771] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExecutionProceedings_Main_20211220
+[2022-02-11 10:38:11,772] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyCounterparties_Sources_20211220
+[2022-02-11 10:38:11,778] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyCounterparties_Counterparties_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyCounterparties_Main_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyFinancialAnalysis_FinancialAnalysis_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyFinancialAnalysis_FinIndicators_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyFinancialAnalysis_Main_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyLicenses_Licenses_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyLicenses_Main_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPaymentDiscipline_PaymentIndexValues_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPaymentDiscipline_PaymentIndexDynamics_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPaymentDiscipline_AnalysisByAmount_20211220
+[2022-02-11 10:38:11,779] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPaymentDiscipline_Overdue_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPaymentDiscipline_AnalysisByIndustry_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPaymentDiscipline_Main_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyRiskFactors_ConsolidatedIndicator_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyRiskFactors_Main_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyRiskFactors_RiskFactors_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyStructure_Coowners_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyStructure_Branch_20211220
+[2022-02-11 10:38:11,780] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyStructure_AffiliatedCompanies_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyStructure_NonprofitOrganizationsRosstat_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyStructure_Main_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyStructure_CoownerEGRUL_Pledge_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_OKVED2List_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_ChangesInNameAndLegalForm_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_CharterCapitalHistory_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_LeaderList_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_Addresses_20211220
+[2022-02-11 10:38:11,781] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_PhoneList_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_IncludeInList_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_ConsolidatedIndicator_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_SubmittedStatements_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_RegistrationCertificates_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_Finance_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_BoardOfDirectors_ExecutiveBody_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_PersonsWithoutWarrant_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_StateContracts_20211220
+[2022-02-11 10:38:11,782] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_ArbitrationCases_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_Main_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_StaffNumberFTS_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_IncludeInList_AddInfo_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_FinanceAndTaxesFTS_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_AccessibleFinData_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_SpecialTaxRegimes_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_BankruptcyMessage_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_FrozenAccounts_20211220
+[2022-02-11 10:38:11,783] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyExtendedReport_BankruptcyArbitrationCases_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPredecessorSuccessor_Reorganizations_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyPredecessorSuccessor_Main_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyAccountingReport_Period_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetCompanyAccountingReport_Main_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_OKVED2List_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_SubmittedStatements_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_IncludeInList_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_IncludeInList_AddInfo_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_Main_20211220
+[2022-02-11 10:38:11,784] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_LinkedOGRNIP_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_RegistrationCertificates_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_ArbitrationCases_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_FrozenAccounts_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_StateContracts_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_PhoneList_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_BankruptcyMessage_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetEntrepreneurShortReport_BankruptcyArbitrationCases_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetOwnershipHierarchy_Coowners_20211220
+[2022-02-11 10:38:11,785] MainProcess                       | utils   | INFO : deleted: Spark_GetOwnershipHierarchy_Main_20211220

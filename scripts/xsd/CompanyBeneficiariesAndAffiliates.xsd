@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="CompanyBeneficiariesAndAffiliates">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SparkID" type="SparkID">
+											<xs:annotation>
+												<xs:documentation>Идентификатор СПАРК</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ShortName" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Краткое наименование компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="INN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ИНН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОГРН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKATO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКАТО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Status" type="Status">
+											<xs:annotation>
+												<xs:documentation>Статус компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Beneficiaries" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Бенефициары</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Beneficiary" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Бенефициар</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Name" type="xs:string">
+																	<xs:annotation>
+																		<xs:documentation>Наименование/ФИО</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="SparkID" type="SparkID" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Идентификатор СПАРК</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="INN" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Код ИНН</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="OGRN" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Код ОГРН</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Country" type="Country" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Страна</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="NotFinalReason" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Причина ненахождения конечного бенефициара</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:attribute name="Id" type="xs:int" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Идентификатор причины</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																		<xs:attribute name="Name" type="xs:string" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Описание причины</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="Type" type="SubjectType" use="required">
+																<xs:annotation>
+																	<xs:documentation>Тип бенефициара: 0 - компания, 2 - физическое лицо</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="IsFinal" type="xs:boolean" use="required">
+																<xs:annotation>
+																	<xs:documentation>Признак конечного бенефициара</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="Affiliates" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Аффилированные лица</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Affiliate" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Аффилированное лицо</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Name" type="xs:string">
+																	<xs:annotation>
+																		<xs:documentation>Наименование/ФИО</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="SparkID" type="SparkID" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Идентификатор СПАРК</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="INN" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Код ИНН</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="OGRN" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Код ОГРН</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Country" type="Country" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Страна</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="AffiliationType">
+																	<xs:annotation>
+																		<xs:documentation>Тип связи</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:attribute name="Id" type="xs:int" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Идентификатор типа</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																		<xs:attribute name="Name" type="xs:string" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Наименование типа</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="Type" type="SubjectType" use="required">
+																<xs:annotation>
+																	<xs:documentation>Тип аффилрованного лица: 0 - компания, 2 - физическое лицо</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

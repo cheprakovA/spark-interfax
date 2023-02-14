@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="CompanyFinancialAnalysis">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SparkID" type="SparkID">
+											<xs:annotation>
+												<xs:documentation>Идентификатор СПАРК</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ShortName" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Краткое наименование компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="INN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ИНН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОГРН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKATO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКАТО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Status" type="Status">
+											<xs:annotation>
+												<xs:documentation>Статус компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="FinancialAnalysis">
+											<xs:annotation>
+												<xs:documentation>Финансовый анализ</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FinPeriod" maxOccurs="5">
+														<xs:annotation>
+															<xs:documentation>Финансовый анализ за период</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:complexContent>
+																<xs:extension base="Period">
+																	<xs:sequence>
+																		<xs:element name="OKVED">
+																			<xs:annotation>
+																				<xs:documentation>Отрасль</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:attribute name="Code" type="xs:string" use="required">
+																					<xs:annotation>
+																						<xs:documentation>Код отрали по ОКВЭД</xs:documentation>
+																					</xs:annotation>
+																				</xs:attribute>
+																				<xs:attribute name="Name" type="xs:string" use="required">
+																					<xs:annotation>
+																						<xs:documentation>Наименование отрасли по ОКВЭД</xs:documentation>
+																					</xs:annotation>
+																				</xs:attribute>
+																			</xs:complexType>
+																		</xs:element>
+																		<xs:element name="FinIndicators">
+																			<xs:annotation>
+																				<xs:documentation>Финансовые показатели</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:sequence>
+																					<xs:element name="Indicator" maxOccurs="unbounded">
+																						<xs:annotation>
+																							<xs:documentation>Финансовый показатель</xs:documentation>
+																						</xs:annotation>
+																						<xs:complexType>
+																							<xs:attribute name="IdFinPok" type="xs:int" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Идентификатор финансового показателя</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="Name" type="xs:string" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Наименование финансового показателя</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="Value" type="MyDecimal" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Значение финансового показателя</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="MedianValueByIndustry" type="MyDecimal" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Медианное значение по отрасли</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="AbsoluteDeviation" type="MyDecimal" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Абсолютное отклонение от медианного значения по отрасли</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="RelativeDeviation" type="MyDecimal">
+																								<xs:annotation>
+																									<xs:documentation>Относительное отклонение от медианного значения по отрасли, %</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																						</xs:complexType>
+																					</xs:element>
+																				</xs:sequence>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																</xs:extension>
+															</xs:complexContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

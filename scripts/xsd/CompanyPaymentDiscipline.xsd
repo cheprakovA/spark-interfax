@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="CompanyPaymentDiscipline">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SparkID" type="SparkID">
+											<xs:annotation>
+												<xs:documentation>Идентификатор СПАРК</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ShortName" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Краткое наименование компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="INN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ИНН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОГРН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKATO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКАТО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Status" type="Status">
+											<xs:annotation>
+												<xs:documentation>Статус компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="PaymentDiscipline">
+											<xs:annotation>
+												<xs:documentation>Платежная дисциплина</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="PaymentIndexValues">
+														<xs:annotation>
+															<xs:documentation>Значения индекса платежной дисциплины за различные периоды</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Period" maxOccurs="4">
+																	<xs:annotation>
+																		<xs:documentation>Период платежей</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="PaymentIndex" type="PaymentIndexStrict">
+																				<xs:annotation>
+																					<xs:documentation>Индекс платежной дисциплины</xs:documentation>
+																				</xs:annotation>
+																			</xs:element>
+																			<xs:element name="AverageOverdue" type="xs:int">
+																				<xs:annotation>
+																					<xs:documentation>Среднее значение просрочки, дней</xs:documentation>
+																				</xs:annotation>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="Name" type="xs:string" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Наименование периода</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="PaymentIndexDynamics" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Динамика индекса платежной дисциплины за 12 месяцев</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Period" maxOccurs="12">
+																	<xs:annotation>
+																		<xs:documentation>Период платежей</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="PaymentIndex" type="PaymentIndexStrict">
+																				<xs:annotation>
+																					<xs:documentation>Индекс платежной дисциплины</xs:documentation>
+																				</xs:annotation>
+																			</xs:element>
+																			<xs:element name="CounterpartiesNumber" type="xs:int">
+																				<xs:annotation>
+																					<xs:documentation>Количество контрагентов</xs:documentation>
+																				</xs:annotation>
+																			</xs:element>
+																			<xs:element name="InvoicesNumber" type="xs:int">
+																				<xs:annotation>
+																					<xs:documentation>Количество счетов</xs:documentation>
+																				</xs:annotation>
+																			</xs:element>
+																			<xs:element name="Sum" type="MyDecimal">
+																				<xs:annotation>
+																					<xs:documentation>Сумма по счетам, руб.</xs:documentation>
+																				</xs:annotation>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="StartDate" type="xs:date" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Начало периода</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																		<xs:attribute name="EndDate" type="xs:date" use="required">
+																			<xs:annotation>
+																				<xs:documentation>Конец периода</xs:documentation>
+																			</xs:annotation>
+																		</xs:attribute>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="InvoicesAnalysis">
+														<xs:annotation>
+															<xs:documentation>Анализ счетов</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="AnalysisByAmount">
+																	<xs:annotation>
+																		<xs:documentation>Анализ счетов по суммам</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="AmountRange" maxOccurs="6">
+																				<xs:annotation>
+																					<xs:documentation>Сумма счетов</xs:documentation>
+																				</xs:annotation>
+																				<xs:complexType>
+																					<xs:complexContent>
+																						<xs:extension base="PaymentDisciplineAnalysis">
+																							<xs:attribute name="MinValue" type="xs:int">
+																								<xs:annotation>
+																									<xs:documentation>Минимальное значение, руб.</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="MaxValue" type="xs:int">
+																								<xs:annotation>
+																									<xs:documentation>Максимальное значение, руб.</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																						</xs:extension>
+																					</xs:complexContent>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="AnalysisByIndustry">
+																	<xs:annotation>
+																		<xs:documentation>Анализ счетов по отраслям контрагентов</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="Industry" maxOccurs="unbounded">
+																				<xs:annotation>
+																					<xs:documentation>Отрасль контрагента</xs:documentation>
+																				</xs:annotation>
+																				<xs:complexType>
+																					<xs:complexContent>
+																						<xs:extension base="PaymentDisciplineAnalysis">
+																							<xs:attribute name="Id" type="xs:int" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Идентификатор</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																							<xs:attribute name="Name" type="xs:string" use="required">
+																								<xs:annotation>
+																									<xs:documentation>Наименование</xs:documentation>
+																								</xs:annotation>
+																							</xs:attribute>
+																						</xs:extension>
+																					</xs:complexContent>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="StartDate" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>Начало периода</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="EndDate" type="xs:date" use="required">
+																<xs:annotation>
+																	<xs:documentation>Конец периода</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="InvoicesNumber" type="xs:int" use="required">
+																<xs:annotation>
+																	<xs:documentation>Количество счетов</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="PaidSum" type="MyDecimal">
+																<xs:annotation>
+																	<xs:documentation>Оплачено за период, руб.</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+															<xs:attribute name="DebtSum" type="MyDecimal">
+																<xs:annotation>
+																	<xs:documentation>Задолженность на конец периода, руб.</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

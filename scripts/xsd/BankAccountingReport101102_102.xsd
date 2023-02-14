@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="BankAccountingReport102">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:annotation>
+			<xs:documentation>Бухгалтерская отчетность</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="SparkID" type="SparkID"/>
+										<xs:element name="INN" type="xs:string" minOccurs="0"/>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0"/>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0"/>
+										<xs:element name="ShortName" type="xs:string"/>
+										<xs:element name="EGRPOIncluded" type="xs:string"/>
+										<xs:element name="EGRULLikvidation" type="xs:string" minOccurs="0"/>
+										<xs:element name="Period">
+											<xs:annotation>
+												<xs:documentation>Период отчетности</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Form102" minOccurs="0">
+														<xs:annotation>
+															<xs:documentation>Форма 102</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Row" minOccurs="0" maxOccurs="unbounded">
+																	<xs:annotation>
+																		<xs:documentation>Одна строка формы</xs:documentation>
+																	</xs:annotation>
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="CLAUSENAME" type="xs:string"/>
+																			<xs:element name="NUMBEROFCLAUSE" type="xs:integer"/>
+																			<xs:element name="VALUETOTAL" type="xs:integer"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="Power" type="xs:integer" use="required">
+																<xs:annotation>
+																	<xs:documentation>Единица измерения</xs:documentation>
+																</xs:annotation>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="DateEnd" type="xs:date" use="required">
+													<xs:annotation>
+														<xs:documentation>дата баланса</xs:documentation>
+													</xs:annotation>
+												</xs:attribute>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

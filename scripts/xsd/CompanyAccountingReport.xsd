@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2018 sp1 (x64) (http://www.altova.com) by Igor Verkhososov (Interfax News Agency Ltd.) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="CompanyAccountingReport">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:annotation>
+			<xs:documentation>Бухгалтерская отчетность</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус рузультата </xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="SparkID" type="SparkID">
+											<xs:annotation>
+												<xs:documentation>Идентификатор СПАРК</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ShortName" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Краткое наименование компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="INN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ИНН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОГРН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="EGRPOIncluded" type="xs:string">
+											<xs:annotation>
+												<xs:documentation>Признак включения в ЕГРПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="EGRULLikvidation" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Сведения о ликвидации по данным ФНС</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Period">
+											<xs:annotation>
+												<xs:documentation>Период отчета</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:complexContent>
+													<xs:extension base="Period">
+														<xs:sequence>
+															<xs:element name="Form" maxOccurs="unbounded">
+																<xs:annotation>
+																	<xs:documentation>Формы отчетов</xs:documentation>
+																</xs:annotation>
+																<xs:complexType>
+																	<xs:sequence>
+																		<xs:element name="Value" maxOccurs="unbounded">
+																			<xs:annotation>
+																				<xs:documentation>Значения строк баланса</xs:documentation>
+																			</xs:annotation>
+																			<xs:complexType>
+																				<xs:simpleContent>
+																					<xs:extension base="xs:long">
+																						<xs:attribute name="Code" type="xs:string">
+																							<xs:annotation>
+																								<xs:documentation>Код строки</xs:documentation>
+																							</xs:annotation>
+																						</xs:attribute>
+																						<xs:attribute name="Name" type="xs:string" use="required">
+																							<xs:annotation>
+																								<xs:documentation>Наименование показателя</xs:documentation>
+																							</xs:annotation>
+																						</xs:attribute>
+																						<xs:attribute name="Column" type="xs:int" use="required">
+																							<xs:annotation>
+																								<xs:documentation>Номер столбца</xs:documentation>
+																							</xs:annotation>
+																						</xs:attribute>
+																					</xs:extension>
+																				</xs:simpleContent>
+																			</xs:complexType>
+																		</xs:element>
+																	</xs:sequence>
+																	<xs:attribute name="ID" type="xs:int" use="required">
+																		<xs:annotation>
+																			<xs:documentation>Код формы отчетности (последняя цифра кода по ОКУД)</xs:documentation>
+																		</xs:annotation>
+																	</xs:attribute>
+																	<xs:attribute name="Power" type="xs:int" use="required">
+																		<xs:annotation>
+																			<xs:documentation>Единица измерения</xs:documentation>
+																		</xs:annotation>
+																	</xs:attribute>
+																</xs:complexType>
+															</xs:element>
+														</xs:sequence>
+														<xs:attribute name="OKVEDCode" type="xs:string">
+															<xs:annotation>
+																<xs:documentation>Код по ОКВЭД</xs:documentation>
+															</xs:annotation>
+														</xs:attribute>
+														<xs:attribute name="ReportType">
+															<xs:annotation>
+																<xs:documentation>Тип отчетности</xs:documentation>
+															</xs:annotation>
+															<xs:simpleType>
+																<xs:restriction base="xs:int">
+																	<xs:enumeration value="1"/>
+																	<xs:enumeration value="2"/>
+																	<xs:enumeration value="3"/>
+																</xs:restriction>
+															</xs:simpleType>
+														</xs:attribute>
+													</xs:extension>
+												</xs:complexContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="CompanyRiskFactors">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SparkID" type="SparkID">
+											<xs:annotation>
+												<xs:documentation>Идентификатор СПАРК</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ShortName" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Краткое наименование компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="INN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ИНН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОГРН</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKATO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКАТО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Status" type="Status">
+											<xs:annotation>
+												<xs:documentation>Статус компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ConsolidatedIndicator" type="ConsolidatedIndicator" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Сводный индикатор риска</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="IndexOfDueDiligence" type="IndexOfDueDiligence">
+											<xs:annotation>
+												<xs:documentation>Индекс должной осмотрительности</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="FailureScore" type="FailureScore">
+											<xs:annotation>
+												<xs:documentation>Индекс финансового риска</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="PaymentIndex" type="PaymentIndex" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Индекс платежной дисциплины</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="RiskFactors" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Факторы риска</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Factor" type="RiskFactor" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Фактор риска</xs:documentation>
+														</xs:annotation>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

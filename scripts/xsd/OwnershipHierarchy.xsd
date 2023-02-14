@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" id="OwnershipHierarchy">
+	<xs:include schemaLocation="CommonTypes.xsd"/>
+	<xs:element name="Response">
+		<xs:annotation>
+			<xs:documentation>Ответ на запрос пользователя</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ResultInfo" type="ResultInfo">
+					<xs:annotation>
+						<xs:documentation>Статус результата работы метода</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Data" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Report" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:all>
+										<xs:element name="SparkID" type="SparkID">
+											<xs:annotation>
+												<xs:documentation>СПАРК ИД</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="ShortName" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Краткое наименование компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="INN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ИНН (заполняется для российских юр. лиц)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OGRN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОГРН (заполняется для российских юр. лиц)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKPO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКПО (заполняется для российских и казахстанских юр. лиц)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="OKATO" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ОКАТО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="EDRPU" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код ЕДРПОУ (заполняется для украинских юр. лиц)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="RNN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код РНН (заполняется для казахстанских юр. лиц)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="BIN" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Код БИН (заполняется для казахстанских юр. лиц)</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Status" type="Status" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Статус компании</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="EGRPOIncluded" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Признак наличия российской компании в ЕГРПО</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="EGRULLikvidation" type="xs:string" minOccurs="0">
+											<xs:annotation>
+												<xs:documentation>Сведения о ликвидации российской компании по данным ФНС</xs:documentation>
+											</xs:annotation>
+										</xs:element>
+										<xs:element name="Coowners">
+											<xs:annotation>
+												<xs:documentation>Иерархия владения компанией</xs:documentation>
+											</xs:annotation>
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Coowner" maxOccurs="unbounded">
+														<xs:annotation>
+															<xs:documentation>Совладелец</xs:documentation>
+														</xs:annotation>
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="Id" type="xs:int">
+																	<xs:annotation>
+																		<xs:documentation>Суррогатный идентификатор</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="ParentId" type="xs:int" minOccurs="0" maxOccurs="unbounded">
+																	<xs:annotation>
+																		<xs:documentation>Суррогатный идентификатор непосредственного совладельца</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Level" type="xs:int">
+																	<xs:annotation>
+																		<xs:documentation>Уровень иерархии</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Name" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Наименование компании / ФИО физ. лица</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="SparkID" type="SparkID" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>СПАРК ИД</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Address" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Местонахождение юр. лица / физ. лица</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Country" type="Country" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Страна регистрации юр. лица / физ. лица</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="INN" type="xs:string" minOccurs="0"/>
+																<xs:element name="OGRN" type="xs:string" minOccurs="0"/>
+																<xs:element name="OKPO" type="xs:string" minOccurs="0"/>
+																<xs:element name="OKOPF" type="OKOPF" minOccurs="0"/>
+																<xs:element name="OKATO" type="xs:string" minOccurs="0"/>
+																<xs:element name="EDRPU" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Код ЕДРПОУ</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="RNN" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Код РНН</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="Manager" type="xs:string" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Руководитель компании</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="SharePart" type="MyDecimal">
+																	<xs:annotation>
+																		<xs:documentation>Доля прямого владения в %</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="SharePartRUR" type="MyDecimal" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Доля прямого владения в рублях</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="IndirectSharePart" type="MyDecimal" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Доля косвенного владения в %</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="CoownerType" type="CoownerType">
+																	<xs:annotation>
+																		<xs:documentation>Тип совладельца (0 - юридическое лицо, 2 - физическое лицо)</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+																<xs:element name="ActualDate" type="xs:date" minOccurs="0">
+																	<xs:annotation>
+																		<xs:documentation>Дата актуальности данных</xs:documentation>
+																	</xs:annotation>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:all>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

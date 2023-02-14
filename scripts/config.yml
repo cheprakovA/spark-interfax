@@ -1,0 +1,110 @@
+aws: 
+  url:               https://storage.yandexcloud.net
+  bucket:            spark-interfax-bucket-idod
+  region_name:       ru-central1
+  service_name:      s3
+  access_key_id:     Q2hKQlozd0ZfaERPa3FzQWZKaTY=
+  secret_access_key: V3BsMGxCLTJlZkxUM0RncWlLUW1LdnNoUDlNU3daVGJDZmp6TmZYYw==
+
+service: 
+  url:                 https://api.spark-interfax.ru/ifaxwebservice/
+  headers: 
+    Content-Type:      "text/xml; charset=utf-8"
+    Connection:        keep-alive
+  login:               VlRCR2F0ZQ==
+  password:            RkJId25pcA==
+  parquets-keep-alive: 7
+  logs-keep-alive:     7
+
+dmz-queue:
+  url:               https://message-queue.api.cloud.yandex.net
+  region_name:       ru-central1
+  service_name:      sqs
+  access_key_id:     aUpwUm9uajFkdGpfSVo1SWJfMm4=
+  secret_access_key: d2xjX3Z0UEoyVHEzYUlheDNwRW1KUUo2RGtqU2g2ZjVPVGktcHAyaA==
+
+methods:
+  all_summary:
+    - GetCompanyArbitrationSummary
+    - GetEntrepreneurArbitrationSummary
+  all_leasings:
+    - GetCompanyLeasings
+    - GetEntrepreneurLeasings
+    - GetLeasingReport
+  risk_report_xml:
+    - GetCompanySparkRisksReportXML
+  all_pledges:
+    - GetCompanyPledges
+    - GetEntrepreneurPledge
+    - GetPledgeReport
+  all_execution_proceedings:
+    - GetCompanyExecutionProceeding
+    - GetEntrepreneurExecutionProceedings
+  counterparties:
+    - GetCompanyCounterparties
+  licenses:
+    - GetCompanyLicenses
+  financial_analysis:
+    - GetCompanyFinancialAnalysis
+  risk_factors:
+    - GetCompanyRiskFactors
+  payment_discipline:
+    - GetCompanyPaymentDiscipline
+  entrepreneur_short_report:
+    - GetEntrepreneurShortReport
+  all_bank_accounting:
+    - GetBankAccountingReport101102_101
+    - GetBankAccountingReport101102_102
+  extended_report:
+    - GetCompanyExtendedReport
+  all_changes:
+    - GetChangedCompanies
+    - GetChangedEntrepreneurs
+  ownership:
+    - GetOwnershipHierarchy
+  structure:
+    - GetCompanyStructure
+  predecessor_successor:
+    - GetCompanyPredecessorSuccessor
+  accounting_report:
+    - GetCompanyAccountingReport
+
+xml-templates:
+  rq-data: |
+    <?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <soap:Body>
+        <{method} xmlns="http://interfax.ru/ifax">
+          {args}
+        </{method}>
+      </soap:Body>
+    </soap:Envelope>
+
+  response-validation: |
+    <\?xml version="1\.0" encoding="utf-8"\?>
+    <soap:Envelope xmlns:soap="http://schemas\.xmlsoap\.org/soap/envelope/" xmlns:xsi="http://www\.w3\.org/2001/XMLSchema-instance" xmlns:xsd="http://www\.w3\.org/2001/XMLSchema">
+      <soap:Body>
+        <{method}Response xmlns="http://interfax\.ru/ifax">
+          <{method}Result>([ a-zA-Z]+)</{method}Result>
+          <xmlData>(.*?)</xmlData>
+        </{method}Response>
+      </soap:Body>
+    </soap:Envelope>
+
+  response-validation-nd: |
+    <\?xml version="1\.0" encoding="utf-8"\?>
+    <soap:Envelope xmlns:soap="http://schemas\.xmlsoap\.org/soap/envelope/" xmlns:xsi="http://www\.w3\.org/2001/XMLSchema-instance" xmlns:xsd="http://www\.w3\.org/2001/XMLSchema">
+      <soap:Body>
+        <{method}Response xmlns="http://interfax.ru/ifax">
+          <{method}Result>([ a-zA-Z]+)</{method}Result>
+        </{method}Response>
+      </soap:Body>
+    </soap:Envelope>
+
+  end-method-rq-data: |
+    <?xml version="1.0" encoding="utf-8"?>
+    <soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+      <soap:Body>
+        <End xmlns="http://interfax.ru/ifax" />
+      </soap:Body>
+    </soap:Envelope>
